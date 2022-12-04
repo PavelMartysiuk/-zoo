@@ -1,0 +1,5 @@
+<div>
+  <app-carousel></app-carousel>
+  <app-about-us *ngIf="aboutUsText" [aboutUsText]="aboutUsText"></app-about-us>
+  <app-faq *ngIf="faqs.length" [faqs]="faqs"></app-faq>
+</div>

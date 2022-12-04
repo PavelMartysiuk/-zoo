@@ -1,0 +1,32 @@
+<div *ngIf="itemType === 'beast'; else employeeCard">
+  <h1 class="text-center">{{animal.type}}</h1>
+  <div class="image-block mb-3">
+    <div class="image-wrapper">
+      <img [src]="animal.photo" alt="Фото зверя">
+    </div>
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item">Кличка: {{animal.name}}</li>
+    <li class="list-group-item">Описание: {{animal.description}}</li>
+    <li class="list-group-item">Тип: {{animal.category}}</li>
+    <li class="list-group-item">Страна: {{animal.country}}</li>
+    <li class="list-group-item">Пол: {{animal.gender}}</li>
+    <li class="list-group-item">Возраст: {{animal.date_of_birth}}</li>
+    <li class="list-group-item">Вес: {{animal.weight}}</li>
+    <li class="list-group-item">Любимая еда: {{animal.favorite_food}}</li>
+  </ul>
+</div>
+<ng-template #employeeCard>
+  <div>
+    <h1 class="text-center">{{employee.name}} {{employee.last_name}}</h1>
+    <div class="image-block mb-3">
+      <div class="image-wrapper">
+        <img [src]="employee.photo" alt="Фото сотрудника">
+      </div>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">Описание: {{employee.description}}</li>
+      <li class="list-group-item">Должность: {{employee.job_title}}</li>
+    </ul>
+  </div>
+</ng-template>
